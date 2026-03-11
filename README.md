@@ -19,3 +19,5 @@ Then enable:
 
 
 <img width="761" height="558" alt="{8066A7C3-D4B2-4457-B7C4-B286C89A436A}" src="https://github.com/user-attachments/assets/1fe0f5c0-3a71-4178-8b61-74bd88f90bfb" />
+
+Made by @Newbie1337x and @joacoloool 
