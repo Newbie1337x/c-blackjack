@@ -1,0 +1,580 @@
+#include <time.h>
+#include <stdio.h> // Necesario para printf y otras funciones de entrada/salida
+#include <windows.h> // Necesario para funciones de manipulación de la consola
+
+void dibujar_mensaje(const char *texto, int segundos, int color)
+{
+    printf("\033[%d;%dH", 18, 30); // Mueve el cursor a la posición (17, 30)
+
+    // Establece el color del texto
+    printf("\033[0;%dm", color);
+
+    printf("%s", texto); // Imprime el texto en la posición especificada
+
+    if (segundos > 1)
+    {
+        Sleep(segundos * 1000); // Espera el tiempo especificado
+        printf("\033[%d;%dH                                                 \n", 18, 30); // Borra el mensaje
+    }
+    if (segundos == -1)
+    {
+        printf("%s", texto);
+    }
+}
+
+void dibujar_decoracion()
+{
+
+    dibujar_diamante(4,25);
+    dibujar_diamante(78,25);
+    dibujar_diamante(12,15);
+    dibujar_diamante(69,15);
+}
+
+void dibujar_fichas(int x, int y, int coins)
+{
+    printf("\033[35m");
+    printf("\033[%d;%dH", y + 1, x); //
+    printf("Coins: ");
+    if (coins < 500)
+        printf("\033[31m"); // Rojo
+    else if (coins < 5000)
+        printf("\033[0m"); // Blanco
+    else if (coins < 10000)
+        printf("\033[32m"); // Verde
+    else if (coins < 100000)
+        printf("\033[34m"); // Azul
+    else if (coins < 1000000)
+    {
+        printf("\033[35m"); // Violeta
+    }
+
+
+
+    printf("%d",coins);
+
+}
+
+
+void dibujar_texto(int x, int y, char texto[], int dato, int color)
+{
+    // Imprimir el texto con el color especificado en las coordenadas (x, y)
+    printf("\033[%dm", color);
+    printf("\033[%d;%dH%s", y, x, texto);
+
+    // Ajustar la posición x para el dato
+    int longitud_texto = strlen(texto);
+    int x_dato = x + longitud_texto + 1; // Agregar 1 para el espacio entre el texto y el dato
+
+    // Imprimir el dato si no es -1
+    if (dato != -1)
+    {
+        printf("\033[%d;%dH%d", y, x_dato, dato);
+    }
+}
+
+void dibujar_boton(int x, int y, char texto[], int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐ ");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("\033[0m");
+    printf(" │   %s   (%d)  │", texto, boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+
+void dibujar_boton_Normal(int x, int y, char texto[], int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐ ");
+    printf("\033[%d;%dH", y + 1, x);
+    printf(" │   %s   (%d)  │", texto, boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+
+void dibujar_boton_opciones(int x, int y, int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐ ");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("\033[0m");
+    printf(" │  Opciones (%d)  │", boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+
+void dibujar_boton_musica(int x, int y, int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐ ");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("\033[0m");
+    printf(" │  Musica   (%d)  │", boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+
+void dibujar_boton_reiniciar(int x, int y, int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐ ");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("\033[0m");
+    printf(" │  Reiniciar(%d)  │", boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+
+void dibujar_boton_volver(int x, int y, int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐ ");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("\033[0m");
+    printf(" │  Volver   (%d)  │", boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+
+void dibujar_boton_dinero(int x, int y, int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐ ");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("\033[0m");
+    printf(" │  +10000   (%d)  │", boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+
+void dibujar_boton_masdinero(int x, int y, int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("\033[0m");
+    printf(" │  +100000  (%d)  │", boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+
+void dibujar_boton_continuar(int x, int y, int boton, int color)
+{
+    printf("\033[%dm", color); // Establecer el color de texto
+    printf("\033[%d;%dH", y, x);
+    printf(" ┌────────────────┐");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("\033[0m");
+    printf(" │  continuar (%d) │", boton);
+    printf("\033[%d;%dH", y + 2, x);
+    printf(" └────────────────┘ ");
+
+
+}
+void dibujar_diamante (int x, int y)
+{
+
+
+    // Dibujar el patrón
+    printf("\033[35m");
+    printf("\033[%d;%dH", y, x);
+    printf("  .     '     ,\n");
+    printf("\033[%d;%dH", y + 1, x);
+    printf("    _________\n");
+    printf("\033[%d;%dH", y + 2, x);
+    printf("\033[0m");
+    printf(" _ /_|_____|_\\ _\n");
+    printf("\033[%d;%dH", y + 3, x);
+    printf("   '. \\   / .'\n");
+    printf("\033[%d;%dH", y + 4, x);
+    printf("     '.\\ /.'\n");
+    printf("\033[%d;%dH", y + 5, x);
+    printf("       '.'\n");
+
+
+}
+
+void dibujar_logo(int x, int y)
+{
+
+    printf("\033[35m");
+    printf("\033[%d;%dH██████╗ ██╗      █████╗  ██████╗██╗  ██╗     ██╗ █████╗  ██████╗██╗  ██╗", y, x);
+    printf("\033[%d;%dH██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝     ██║██╔══██╗██╔════╝██║ ██╔╝", y + 1, x);
+    printf("\033[%d;%dH██████╔╝██║     ███████║██║     █████╔╝      ██║███████║██║     █████╔╝ ", y + 2, x);
+    printf("\033[%d;%dH██╔══██╗██║     ██╔══██║██║     ██╔═██╗ ██   ██║██╔══██║██║     ██╔═██╗ ", y + 3, x);
+    printf("\033[%d;%dH██████╔╝███████╗██║  ██║╚██████╗██║  ██╗╚█████╔╝██║  ██║╚██████╗██║  ██╗", y + 4, x);
+    printf("\033[%d;%dH╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝", y + 5, x);
+    printf("\033[%d;%dH========================================================================", y + 6, x);
+
+
+}
+
+dibujar_logoPerfiles (int x, int y){
+
+printf("\033[35m");
+printf("\033[%d;%dH██████╗ ███████╗██████╗ ███████╗██╗██╗     ███████╗███████╗", y, x);
+printf("\033[%d;%dH██╔══██╗██╔════╝██╔══██╗██╔════╝██║██║     ██╔════╝██╔════╝", y + 1, x);
+printf("\033[%d;%dH██████╔╝█████╗  ██████╔╝█████╗  ██║██║     █████╗  ███████╗", y + 2, x);
+printf("\033[%d;%dH██╔═══╝ ██╔══╝  ██╔══██╗██╔══╝  ██║██║     ██╔══╝  ╚════██║", y + 3, x);
+printf("\033[%d;%dH██║     ███████╗██║  ██║██║     ██║███████╗███████╗███████║", y + 4, x);
+printf("\033[%d;%dH╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝", y + 5, x);
+printf("\033[%d;%dH===========================================================", y + 6, x);
+
+}
+
+
+void dibujar_logo_anim(int x, int y)
+{
+    char colores[8][15] = {"\033[31m", "\033[33m", "\033[32m", "\033[34m", "\033[35m"};
+    int colores_Cant = 5;
+
+    for (int i = 0; i < colores_Cant; i++)
+    {
+        printf("%s", colores[i]);
+        printf("\033[%d;%dH██████╗ ██╗      █████╗  ██████╗██╗  ██╗     ██╗ █████╗  ██████╗██╗  ██╗", y, x);
+        printf("\033[%d;%dH██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝     ██║██╔══██╗██╔════╝██║ ██╔╝", y + 1, x);
+        printf("\033[%d;%dH██████╔╝██║     ███████║██║     █████╔╝      ██║███████║██║     █████╔╝ ", y + 2, x);
+        printf("\033[%d;%dH██╔══██╗██║     ██╔══██║██║     ██╔═██╗ ██   ██║██╔══██║██║     ██╔═██╗ ", y + 3, x);
+        printf("\033[%d;%dH██████╔╝███████╗██║  ██║╚██████╗██║  ██╗╚█████╔╝██║  ██║╚██████╗██║  ██╗", y + 4, x);
+        printf("\033[%d;%dH╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝", y + 5, x);
+        printf("\033[%d;%dH========================================================================", y + 6, x);
+
+        y-= 5;
+        Sleep(750);
+        borrar_todo(20,20);
+
+    }
+    system("cls");
+    y+= 5;
+    printf("\033[%d;%dH██████╗ ██╗      █████╗  ██████╗██╗  ██╗     ██╗ █████╗  ██████╗██╗  ██╗", y, x);
+    printf("\033[%d;%dH██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝     ██║██╔══██╗██╔════╝██║ ██╔╝", y + 1, x);
+    printf("\033[%d;%dH██████╔╝██║     ███████║██║     █████╔╝      ██║███████║██║     █████╔╝ ", y + 2, x);
+    printf("\033[%d;%dH██╔══██╗██║     ██╔══██║██║     ██╔═██╗ ██   ██║██╔══██║██║     ██╔═██╗ ", y + 3, x);
+    printf("\033[%d;%dH██████╔╝███████╗██║  ██║╚██████╗██║  ██╗╚█████╔╝██║  ██║╚██████╗██║  ██╗", y + 4, x);
+    printf("\033[%d;%dH╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝", y + 5, x);
+    printf("\033[%d;%dH========================================================================", y + 6, x);
+    printf("\033[0m");
+}
+
+
+void dibujar_opciones(int x, int y)
+{
+    printf("\033[35m");
+    printf("\033[%d;%dH██████╗ ██████╗  ██████╗██╗ ██████╗ ███╗   ██╗███████╗███████╗", y, x);
+    printf("\033[%d;%dH██╔═══██╗██╔══██╗██╔════╝██║██╔═══██╗████╗  ██║██╔════╝██╔════╝", y + 1, x);
+    printf("\033[%d;%dH██║   ██║██████╔╝██║     ██║██║   ██║██╔██╗ ██║█████╗  ███████╗", y + 2, x);
+    printf("\033[%d;%dH██║   ██║██╔═══╝ ██║     ██║██║   ██║██║╚██╗██║██╔══╝  ╚════██║", y + 3, x);
+    printf("\033[%d;%dH╚██████╔╝██║     ╚██████╗██║╚██████╔╝██║ ╚████║███████╗███████║", y + 4, x);
+    printf("\033[%d;%dH ╚═════╝ ╚═╝      ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚══════╝", y + 5, x);
+    printf("\033[0m");
+
+}
+
+
+void dibujar_carta(int numero, char palo[], int x, int y, char pc)
+{
+    if (pc == 's')
+        printf("\033[35m");
+    else
+        printf("\033[35m");
+
+    for (int i = 0; i < 9; i++)
+    {
+        printf("\033[%d;%dH", y + i, x);
+        switch (i)
+        {
+        case 0:
+            printf("┌───────────┐\n");
+            break;
+        case 1:
+            printf("│%-2s         │\n", numero);
+            break;
+        case 4:
+            printf("│     %s     │\n", palo);
+            break;
+        case 7:
+            printf("│         %-2s│\n", numero);
+            break;
+        case 8:
+            printf("└───────────┘\n");
+            break;
+        default:
+            printf("│           │\n");
+            break;
+        }
+    }
+    printf("\033[0m");
+}
+
+void dibujar_Linea (int x, int y)
+{
+    printf("\033[35m");
+    printf("\033[%d;%dH──────────────────────────────────────────────────────────────────────────────────────\n", x, y);
+
+}
+void dibujar_Marco(int x, int y)
+{
+    printf("\033[35m");
+    printf("\033[%d;%dH╭──────────────────────────────────────────────────────────────────────────────────────╮\n", x, y);
+
+
+    for (int i = 1; i <= 30; i++)
+    {
+        printf("\033[%d;%dH│\033[%d;%dH│\n", x + i, y, x + i, y + 87);
+    }
+
+
+    printf("\033[%d;%dH╰──────────────────────────────────────────────────────────────────────────────────────╯\n", x + 30, y);
+}
+
+void dibujar_Casino(int x, int y)
+{
+
+    printf("\033[35m");
+    printf("\033[%d;%dH _______  _______  _______ _________ _        _______ \n",y, x);
+
+    printf("\033[%d;%dH(  ____ \\(  ___  )(  ____ \\__   __/( (    /|(  ___  )\n",y + 1, x);
+    printf("\033[%d;%dH| (    \\/| (   ) || (    \\/   ) (   |  \\  ( || (   ) |\n",y + 2, x);
+    printf("\033[%d;%dH| |      | (___) || (_____    | |   |   \\ | || |   | |\n",y + 3, x);
+    printf("\033[%d;%dH| |      |  ___  |(_____  )   | |   | (\\ \\) || |   | |\n",y + 4, x);
+    printf("\033[37m");
+    printf("\033[%d;%dH| |      | (   ) |      ) |   | |   | | \\   || |   | |\n",y + 5, x);
+    printf("\033[%d;%dH| (____/\\| )   ( |/\\____) |___) (___| )  \\  || (___) |\n",y + 6, x);
+    printf("\033[%d;%dH(_______/|/     \\|\\_______)\\_______/|/    )_)(_______)\n",y + 7, x);
+}
+
+
+void dibujar_Perdiste(int x, int y)
+{
+    printf("\033[35m");
+    printf("", y, x);
+    printf("\033[%d;%dH██████╗ ███████╗██████╗ ██████╗ ██╗███████╗████████╗███████╗\n",y, x);
+    printf("\033[%d;%dH██╔══██╗██╔════╝██╔══██╗██╔══██╗██║██╔════╝╚══██╔══╝██╔════╝\n",y + 1, x);
+    printf("\033[%d;%dH██████╔╝█████╗  ██████╔╝██║  ██║██║███████╗   ██║   █████╗  \n",y + 2, x);
+    printf("\033[%d;%dH██╔═══╝ ██╔══╝  ██╔══██╗██║  ██║██║╚════██║   ██║   ██╔══╝  \n",y + 3, x);
+    printf("\033[%d;%dH██║     ███████╗██║  ██║██████╔╝██║███████║   ██║   ███████╗\n",y + 4, x);
+    printf("\033[%d;%dH╚═╝     ╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝╚══════╝   ╚═╝   ╚══════╝\n",y + 5, x);
+}
+
+void dibujar_PerdisteAnim (int x, int y)
+{
+
+    for (int i = 0; i < 10; i++)
+    {
+
+        dibujar_Perdiste(x,y*i);
+
+        usleep(20000);
+        system("cls");
+    }
+    dibujar_Perdiste(x,10);
+    printf("\033[%d;%dH─────────────────────────────────────────────────────────────────\n", x - 5, y + 17);
+
+}
+
+void dibujar_Ganaste(int x, int y)
+{
+    printf("\033[35m");
+    printf("\033[%d;%dH ██████╗  █████╗ ███╗   ██╗ █████╗ ███████╗████████╗███████╗\n", y, x);
+    printf("\033[%d;%dH██╔════╝ ██╔══██╗████╗  ██║██╔══██╗██╔════╝╚══██╔══╝██╔════╝\n", y + 1, x);
+    printf("\033[%d;%dH██║  ███╗███████║██╔██╗ ██║███████║███████╗   ██║   █████╗  \n", y + 2, x);
+    printf("\033[%d;%dH██║   ██║██╔══██║██║╚██╗██║██╔══██║╚════██║   ██║   ██╔══╝  \n", y + 3, x);
+    printf("\033[%d;%dH╚██████╔╝██║  ██║██║ ╚████║██║  ██║███████║   ██║   ███████╗\n", y + 4, x);
+    printf("\033[%d;%dH ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝\n", y + 5, x);
+}
+
+void dibujar_Empate (int x, int y)
+{
+    printf("\033[35m");
+    printf("\033[%d;%dH███████╗███╗   ███╗██████╗  █████╗ ████████╗███████╗\n", y, x);
+    printf("\033[%d;%dH██╔════╝████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝██╔════╝\n", y + 1, x);
+    printf("\033[%d;%dH█████╗  ██╔████╔██║██████╔╝███████║   ██║   █████╗  \n", y + 2, x);
+    printf("\033[%d;%dH██╔══╝  ██║╚██╔╝██║██╔═══╝ ██╔══██║   ██║   ██╔══╝  \n", y + 3, x);
+    printf("\033[%d;%dH███████╗██║ ╚═╝ ██║██║     ██║  ██║   ██║   ███████╗\n", y + 4, x);
+    printf("\033[%d;%dH╚══════╝╚═╝     ╚═╝╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚══════╝\n", y + 5, x);
+}
+
+void dibujar_EmpateAnim (int x, int y)
+{
+
+    for (int i = 0; i < 10; i++)
+    {
+
+        dibujar_Empate(x,y*i);
+
+        usleep(20000);
+        system("cls");
+    }
+    dibujar_Empate(x,10);
+    printf("\033[%d;%dH─────────────────────────────────────────────────────────────────\n", x - 5, y + 17);
+
+}
+
+
+
+void dibujar_GanasteAnim (int x, int y)
+{
+
+    for (int i = 0; i < 10; i++)
+    {
+
+        dibujar_Ganaste(x,y*i);
+
+        usleep(20000);
+        system("cls");
+    }
+    dibujar_Ganaste(x,10);
+    printf("\033[%d;%dH─────────────────────────────────────────────────────────────────\n", x - 5, y + 17);
+
+}
+
+void dibujar_carta_reverso(int x, int y)
+{
+    printf("\033[35m"); // color rojo
+    for (int i = 0; i < 9; i++)
+    {
+        printf("\033[%d;%dH", y + i, x);
+        switch (i)
+        {
+        case 0:
+            printf("┌───────────┐\n");
+            break;
+        case 8:
+            printf("└───────────┘\n");
+            break;
+        default:
+            printf("│░░░░░░░░░░░│\n");
+            break;
+        }
+    }
+    printf("\033[0m");
+}
+
+
+
+
+void dibujar_mazo(int x, int y)
+{
+    printf("\033[35m"); // color rojo
+    for (int i = 0; i < 9; i++)
+    {
+        printf("\033[%d;%dH", y + i, x);
+        switch (i)
+        {
+        case 0:
+            printf("┌───────────┐┐┐┐\n");
+            break;
+        case 8:
+            printf("└───────────┘┘┘┘\n");
+            break;
+        default:
+            printf("│░░░░░░░░░░░││││\n");
+            break;
+        }
+
+    }
+    printf("\033[0m");
+}
+
+void dibujar_barajarmazo(int x, int y)
+{
+    int i;
+    for (i = 0; i < 5; i++)
+    {
+        // Borra el mazo dibujado anteriormente
+        borrar_mazo(x, y);
+
+        // Dibuja el mazo en la nueva posición
+        dibujar_mazo(x + i, y);
+
+        // Introduce un retraso para que se vea la animación
+        // El valor dentro de usleep es el tiempo en microsegundos
+        // Aquí se espera 100,000 microsegundos, es decir, 0.1 segundo
+        usleep(100000); // Cambiar a Sleep(100) si se está utilizando Windows
+    }
+}
+
+
+
+
+void dibujar_cpu(int x, int y)
+{
+    printf("\033[91m"); // color rojo
+
+    for (int i = 4; i < 9; i++)
+    {
+        printf("\033[%d;%dH", y + i, x);
+        if (i < 8)
+        {
+            printf("│░░░░░░░░░░░│\n");
+        }
+        else
+        {
+            printf("└───────────┘\n");
+        }
+    }
+    printf("\033[0m");
+}
+
+void borrar_carta_jugador(int x, int y)
+{
+    for (int i = 0; i < 13; i++)
+    {
+        printf("\033[%d;%dH", y + i, x);
+        printf("             \n");
+    }
+}
+
+void borrar_mazo(int x, int y)
+{
+    // Suponiendo que el mazo ocupa un área rectangular en la pantalla
+    // con un tamaño específico (por ejemplo, 5 filas y 9 columnas)
+
+    // Itera sobre cada posición ocupada por el mazo en la pantalla
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 9; j++)
+        {
+            printf("\033[%d;%dH", y + i, x + j ); // Mueve el cursor a la posición
+            printf(" "); // Borra el carácter en esa posición
+        }
+    }
+}
+
+
+
+void borrar_todo(int x, int y)
+{
+    for (int i = 0; i < 30; i++)
+    {
+        printf("\033[%d;%dH", y + i, x);
+        printf("                                                                                                                 \n");
+
+    }
+}

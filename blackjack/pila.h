@@ -1,0 +1,26 @@
+#ifndef HEADER_E80BE3385EF2AB89
+#define HEADER_E80BE3385EF2AB89
+
+#include <stdio.h>
+#include <malloc.h>
+#define Pila struct _Pila
+#define P_Pila struct _Pila *
+#include <time.h>
+struct _Pila
+{
+    int *valores;
+    int postope;
+};
+
+void inicpila(P_Pila p);
+void apilar(P_Pila p, int dato);
+void apilar(P_Pila p, int dato);
+int desapilar(P_Pila p);
+int tope(P_Pila p);
+int pilavacia(P_Pila p);
+void leer (P_Pila p);
+void mostrar(P_Pila p);
+
+
+#endif // header guard
+

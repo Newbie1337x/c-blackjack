@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1710105729 source:f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\main.c
+	<stdio.h>
+	<windows.h>
+	"dibujar.h"
+	"mazo.h"
+	"acciones.h"
+	"ia.h"
+	"truco.h"
+
+1710105403 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\dibujar.h
+	<stdio.h>
+	<windows.h>
+
+1710110974 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\mazo.h
+	<stdio.h>
+	<windows.h>
+
+1710106302 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\acciones.h
+	<stdio.h>
+	<windows.h>
+
+1710037318 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\ia.h
+	<stdio.h>
+	<windows.h>
+
+1710103873 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\truco.h
+	<stdio.h>
+	<windows.h>
+
+1710127867 source:f:\programacion\facultad\programacion a\projectos\extras\truco\main.c
+	<stdio.h>
+	<windows.h>
+	"dibujar.h"
+	"mazo.h"
+	"acciones.h"
+	"ia.h"
+	"truco.h"
+
+1716856228 f:\programacion\facultad\programacion a\projectos\extras\truco\dibujar.h
+	<stdio.h>
+	<windows.h>
+
+1716856177 f:\programacion\facultad\programacion a\projectos\extras\truco\mazo.h
+	<stdio.h>
+	<windows.h>
+
+1710130349 f:\programacion\facultad\programacion a\projectos\extras\truco\acciones.h
+	<stdio.h>
+	<windows.h>
+
+1710037318 f:\programacion\facultad\programacion a\projectos\extras\truco\ia.h
+	<stdio.h>
+	<windows.h>
+
+1716856386 f:\programacion\facultad\programacion a\projectos\extras\truco\truco.h
+	<stdio.h>
+	<windows.h>
+
+1717197048 source:f:\programacion\facultad\programacion a\projectos\extras\blackjack\main.c
+	<stdio.h>
+	<windows.h>
+	"dibujar.h"
+	"mazo.h"
+	"menu.h"
+	"ia.h"
+	"truco.h"
+	"pila.h"
+
+1716939731 f:\programacion\facultad\programacion a\projectos\extras\blackjack\dibujar.h
+	<stdio.h>
+	<windows.h>
+
+1717196978 f:\programacion\facultad\programacion a\projectos\extras\blackjack\mazo.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+
+1716908808 f:\programacion\facultad\programacion a\projectos\extras\blackjack\acciones.h
+	<stdio.h>
+	<windows.h>
+
+1717196351 f:\programacion\facultad\programacion a\projectos\extras\blackjack\ia.h
+	<stdio.h>
+	<windows.h>
+
+1717196930 f:\programacion\facultad\programacion a\projectos\extras\blackjack\truco.h
+	<stdio.h>
+	<windows.h>
+
+1707578122 source:f:\programacion\facultad\programacion a\projectos\extras\blackjack\pila.c
+	"pila.h"
+
+1707578122 f:\programacion\facultad\programacion a\projectos\extras\blackjack\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1716937886 f:\programacion\facultad\programacion a\projectos\extras\blackjack\menu.h
+	<stdio.h>
+	<windows.h>
+

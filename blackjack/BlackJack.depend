@@ -1,0 +1,422 @@
+# depslib dependency file v1.0
+1710105729 source:f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\main.c
+	<stdio.h>
+	<windows.h>
+	"dibujar.h"
+	"mazo.h"
+	"acciones.h"
+	"ia.h"
+	"truco.h"
+
+1710105403 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\dibujar.h
+	<stdio.h>
+	<windows.h>
+
+1710110974 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\mazo.h
+	<stdio.h>
+	<windows.h>
+
+1710106302 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\acciones.h
+	<stdio.h>
+	<windows.h>
+
+1710037318 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\ia.h
+	<stdio.h>
+	<windows.h>
+
+1710103873 f:\programacion\facultad\programacion a\projectos\trabajo practico 3 - pilas avanzado\truco\truco.h
+	<stdio.h>
+	<windows.h>
+
+1710127867 source:f:\programacion\facultad\programacion a\projectos\extras\truco\main.c
+	<stdio.h>
+	<windows.h>
+	"dibujar.h"
+	"mazo.h"
+	"acciones.h"
+	"ia.h"
+	"truco.h"
+
+1716856228 f:\programacion\facultad\programacion a\projectos\extras\truco\dibujar.h
+	<stdio.h>
+	<windows.h>
+
+1716856177 f:\programacion\facultad\programacion a\projectos\extras\truco\mazo.h
+	<stdio.h>
+	<windows.h>
+
+1710130349 f:\programacion\facultad\programacion a\projectos\extras\truco\acciones.h
+	<stdio.h>
+	<windows.h>
+
+1710037318 f:\programacion\facultad\programacion a\projectos\extras\truco\ia.h
+	<stdio.h>
+	<windows.h>
+
+1716856386 f:\programacion\facultad\programacion a\projectos\extras\truco\truco.h
+	<stdio.h>
+	<windows.h>
+
+1717237760 source:f:\programacion\facultad\programacion a\projectos\extras\blackjack\main.c
+	<stdio.h>
+	<windows.h>
+	<time.h>
+	"dibujar.h"
+	"mazo.h"
+	"menu.h"
+	"ia.h"
+	"truco.h"
+	"pila.h"
+	"alg_mezclar.h"
+
+1717224464 f:\programacion\facultad\programacion a\projectos\extras\blackjack\dibujar.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1717198411 f:\programacion\facultad\programacion a\projectos\extras\blackjack\mazo.h
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
+1716908808 f:\programacion\facultad\programacion a\projectos\extras\blackjack\acciones.h
+	<stdio.h>
+	<windows.h>
+
+1717197332 f:\programacion\facultad\programacion a\projectos\extras\blackjack\ia.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1717236543 f:\programacion\facultad\programacion a\projectos\extras\blackjack\truco.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"alg_mezclar.h"
+
+1717197332 source:f:\programacion\facultad\programacion a\projectos\extras\blackjack\pila.c
+	"pila.h"
+	<time.h>
+
+1717197332 f:\programacion\facultad\programacion a\projectos\extras\blackjack\pila.h
+	<stdio.h>
+	<malloc.h>
+	<time.h>
+
+1717235433 f:\programacion\facultad\programacion a\projectos\extras\blackjack\menu.h
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
+1717170709 source:c:\users\joaal\escritorio\blackjack\main.c
+	<stdio.h>
+	<windows.h>
+	"dibujar.h"
+	"mazo.h"
+	"menu.h"
+	"ia.h"
+	"truco.h"
+	"pila.h"
+	"alg_mezclar.h"
+
+1716939731 c:\users\joaal\escritorio\blackjack\dibujar.h
+	<stdio.h>
+	<windows.h>
+
+1717127805 c:\users\joaal\escritorio\blackjack\mazo.h
+	<stdio.h>
+	<windows.h>
+
+1717122385 c:\users\joaal\escritorio\blackjack\menu.h
+	<stdio.h>
+	<windows.h>
+
+1716925053 c:\users\joaal\escritorio\blackjack\ia.h
+	<stdio.h>
+	<windows.h>
+
+1716939284 c:\users\joaal\escritorio\blackjack\truco.h
+	<stdio.h>
+	<windows.h>
+
+1707578122 c:\users\joaal\escritorio\blackjack\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1707578122 source:c:\users\joaal\escritorio\blackjack\pila.c
+	"pila.h"
+
+1717129700 source:c:\users\joaal\escritorio\blackjack\alg_mezclar.c
+	<stdio.h>
+	"pila.h"
+	"alg_mezclar.h"
+
+1717170513 c:\users\joaal\escritorio\blackjack\alg_mezclar.h
+
+1717213468 source:f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\alg_mezclar.c
+	<stdio.h>
+	"alg_mezclar.h"
+
+1717197332 f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\pila.h
+	<stdio.h>
+	<malloc.h>
+	<time.h>
+
+1717213488 f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\alg_mezclar.h
+
+1717213504 source:f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\main.c
+	<stdio.h>
+	<windows.h>
+	<time.h>
+	"dibujar.h"
+	"mazo.h"
+	"menu.h"
+	"ia.h"
+	"truco.h"
+	"pila.h"
+	"alg_mezclar.h"
+
+1717202984 f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\dibujar.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1717198411 f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\mazo.h
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
+1717197332 f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\menu.h
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
+1717197332 f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\ia.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1717212578 f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\truco.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"alg_mezclar.h"
+
+1717197332 source:f:\programacion\facultad\programacion a\projectos\extras\blackjack joaco\blackjack\pila.c
+	"pila.h"
+	<time.h>
+
+1717236273 source:f:\programacion\facultad\programacion a\projectos\extras\blackjack\alg_mezclar.c
+	<stdio.h>
+	"alg_mezclar.h"
+
+1717236273 f:\programacion\facultad\programacion a\projectos\extras\blackjack\alg_mezclar.h
+
+1717559847 source:c:\users\joaal\escritorio\blackjackv2\blackjack\alg_mezclar.c
+	<stdio.h>
+	"alg_mezclar.h"
+
+1717560779 c:\users\joaal\escritorio\blackjackv2\blackjack\alg_mezclar.h
+
+1717560809 source:c:\users\joaal\escritorio\blackjackv2\blackjack\main.c
+	<stdio.h>
+	<windows.h>
+	<time.h>
+	"dibujar.h"
+	"menu.h"
+	"truco.h"
+	"pila.h"
+	"alg_mezclar.h"
+
+1717560475 c:\users\joaal\escritorio\blackjackv2\blackjack\dibujar.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1717198412 c:\users\joaal\escritorio\blackjackv2\blackjack\mazo.h
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
+1717560779 c:\users\joaal\escritorio\blackjackv2\blackjack\menu.h
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
+1717197334 c:\users\joaal\escritorio\blackjackv2\blackjack\ia.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1717560094 c:\users\joaal\escritorio\blackjackv2\blackjack\truco.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"alg_mezclar.h"
+
+1717197334 c:\users\joaal\escritorio\blackjackv2\blackjack\pila.h
+	<stdio.h>
+	<malloc.h>
+	<time.h>
+
+1717197334 source:c:\users\joaal\escritorio\blackjackv2\blackjack\pila.c
+	"pila.h"
+	<time.h>
+
+1717560847 source:c:\users\joaal\escritorio\blackjackv2\blackjack\menu.c
+	<stdio.h>
+	<windows.h>
+	<time.h>
+	"menu.h"
+	"dibujar.h"
+
+1717560094 source:c:\users\joaal\escritorio\blackjackv2\blackjack\truco.c
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"alg_mezclar.h"
+
+1717560475 source:c:\users\joaal\escritorio\blackjackv2\blackjack\dibujar.c
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1717559847 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\alg_mezclar.c
+	<stdio.h>
+	"alg_mezclar.h"
+
+1717560779 f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\alg_mezclar.h
+
+1717560475 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\dibujar.c
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1718745055 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\main.c
+	<stdio.h>
+	<windows.h>
+	<time.h>
+	"ui.h"
+	"menu.h"
+	"blackjack.h"
+	"pila.h"
+	"cartas.h"
+
+1717560475 f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\dibujar.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1718744340 f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\menu.h
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
+1717560094 f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\truco.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"alg_mezclar.h"
+
+1717583776 f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\pila.h
+	<stdio.h>
+	<malloc.h>
+	<time.h>
+
+1718745375 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\menu.c
+	<stdio.h>
+	<windows.h>
+	<time.h>
+	"menu.h"
+	"ui.h"
+
+1717583776 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\pila.c
+	"pila.h"
+	<time.h>
+
+1717560094 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\truco.c
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"alg_mezclar.h"
+
+1717583776 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\blackjack.c
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"cartas.h"
+
+1717583776 f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\cartas.h
+
+1717583776 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\cartas.c
+	<stdio.h>
+	"cartas.h"
+
+1717582732 f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\blackjack.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"cartas.h"
+
+1718743159 f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\ui.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1718743424 source:f:\programacion\facultad\programacion a\projectos\extras\blackjackv3\blackjack\ui.c
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1717583778 source:c:\users\joaal\escritorio\programas\blackjackv3\blackjack\blackjack.c
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"cartas.h"
+
+1717583778 c:\users\joaal\escritorio\programas\blackjackv3\blackjack\cartas.h
+
+1717583778 source:c:\users\joaal\escritorio\programas\blackjackv3\blackjack\cartas.c
+	<stdio.h>
+	"cartas.h"
+
+1718745056 source:c:\users\joaal\escritorio\programas\blackjackv3\blackjack\main.c
+	<stdio.h>
+	<windows.h>
+	<time.h>
+	"ui.h"
+	"menu.h"
+	"blackjack.h"
+	"pila.h"
+	"cartas.h"
+
+1718743160 c:\users\joaal\escritorio\programas\blackjackv3\blackjack\ui.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
+1718744342 c:\users\joaal\escritorio\programas\blackjackv3\blackjack\menu.h
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
+1717582734 c:\users\joaal\escritorio\programas\blackjackv3\blackjack\blackjack.h
+	<time.h>
+	<stdio.h>
+	<windows.h>
+	"cartas.h"
+
+1717583778 c:\users\joaal\escritorio\programas\blackjackv3\blackjack\pila.h
+	<stdio.h>
+	<malloc.h>
+	<time.h>
+
+1717583778 source:c:\users\joaal\escritorio\programas\blackjackv3\blackjack\pila.c
+	"pila.h"
+	<time.h>
+
+1718743426 source:c:\users\joaal\escritorio\programas\blackjackv3\blackjack\ui.c
+	<time.h>
+	<stdio.h>
+	<windows.h>
+
